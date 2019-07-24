@@ -1,0 +1,57 @@
+page-home {
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .wrapper {
+        flex: 1;
+        display: flex;
+        box-shadow: 10px 10px solid black;
+        
+    }
+    .container .wrapper .pic {
+        flex: 1;
+        background-image: url('../../assets/imgs/cpt.jpg');
+        background-size: cover;
+        height: 25vh;
+    }
+    .container .search {
+        flex: 1;
+    }
+    .container .wrapper .pic ion-list{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .second-col {
+        ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+            color: #fff;
+          }
+    }
+    .thumb {
+        padding: 2em;
+    }
+
+}

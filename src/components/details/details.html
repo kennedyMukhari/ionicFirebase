@@ -1,0 +1,17 @@
+<!-- Generated template for the DetailsComponent component -->
+
+<ion-content>
+  <div class="container">
+    <div class="wrapper">
+        <h2 text-center>Confirmed Booking:</h2>
+        <ion-list *ngFor="let room of items">
+            <ion-item no-lines>
+              <p>Check in date: {{room.checkin}}</p>
+            </ion-item>
+            <ion-item no-lines>
+              <p>Check in date: {{room.checkout}}</p>
+            </ion-item>
+          </ion-list>
+    </div>
+  </div>
+</ion-content>

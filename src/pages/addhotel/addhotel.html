@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AddhotelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>View Rooms</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let room of getRooms;" color="dark">
+
+      <img style="height: 300px;" src="{{room.image}}">
+    
+      <ion-item>
+        <!-- <ion-icon name="football" item-start large></ion-icon> -->
+        <img src="../../assets/imgs/_ionicons_svg_ios-bed.svg" style="height: 30px;width: 30px;" alt="" item-start>
+        <h2 style="color: grey">{{room.RoomType}}</h2>
+      </ion-item>
+
+      <ion-item >
+          <ion-icon name="list" item-start large></ion-icon>
+          <p style="color: grey">{{room.Description}}</p>
+      </ion-item>
+    
+      <ion-item>
+        <ion-icon name="cash" item-start large></ion-icon>
+        <h2 style="color: cadetblue">ZAR, {{room.Price}}</h2>
+      </ion-item>
+    
+      <ion-item>
+        <p text-start>
+            <ion-icon name="wifi"item-start></ion-icon> Free Wi-Fi
+        </p>
+        <button ion-button (click)="goToBookingsPage()" icon-start clear item-end>
+          <ion-icon name="book"></ion-icon>
+          BOOK
+        </button>
+      </ion-item>
+    
+    </ion-card>
+</ion-content>

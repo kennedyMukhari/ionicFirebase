@@ -1,0 +1,286 @@
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <ion-title text-center>
+      Hotel
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div padding class="wrapper">
+      <div class="pic">
+        <button ion-button (click)="goToRooms()" block>Add Rooms</button>
+        <button ion-button (click)="goToAddHotel()" block>View Rooms</button>
+      </div>
+    </div>
+    <ion-card color="dark">
+      <ion-card-header>
+        THE BAY HOTEL <br>
+        Check out the best Hotel:<button ion-button (click)="goToGallery()" outline>Gallery</button>
+      </ion-card-header>
+
+    </ion-card>
+    <div padding>
+      <p>With the majestic Twelve Apostles mountain range as a backdrop and the Atlantic Ocean on its doorstep,
+        The Bay Hotel boasts an unrivalled location in Camps Bay
+        – making it one of the most beautiful beachfront hotels in Cape Town</p>
+    </div>
+    <div class="search">
+      <ion-card color="dark">
+        <ion-card-header>
+          Check in to one of the best:
+          <button ion-button outline (click)="goToAddHotel()">BOOK NOW</button>
+        </ion-card-header>
+      </ion-card>
+      <ion-card color="dark">
+        <!-- <ion-card-header>
+          Header
+        </ion-card-header> -->
+        <ion-card-content>
+          IF YOU ARE SPENDING JUST A NIGHT IN CAPE TOWN, WHY NOT MAKE IT INTERESTING?
+          <button ion-button outline (click)="goToLogin()">Sign In</button> <br>
+          Don't have an account?
+          <button ion-button clear (click)="goToRegister()">Sign Up Here</button>
+        </ion-card-content>
+      </ion-card>
+      <div margin>
+        <ion-item no-padding>
+          <ion-label position="floating" text-center>
+            <h1>Hotel Details</h1>
+          </ion-label>
+        </ion-item>
+        <p>This upmarket beachside hotel is 6.2 km from the Table Mountain Nature Reserve and 7 km from the Green Point
+          Lighthouse.</p>
+
+        <p> The airy rooms and suites have a casual-chic style, many with ocean views.
+          All have air-conditioning, free Wi-Fi, flat-screens, iPod docks, and tea and coffeemaking equipment.
+          Many have private patios, and upgraded rooms add whirlpool tubs.</p>
+
+        <p> Free breakfast is served in the bright restaurant. The glass-enclosed bistro offers sea views,
+          and there's an intimate bar and lounge. Other facilities include heated outdoor pools with poolside bars,
+          a spa, a salon and a gym. Meeting facilities and private parking (fee) are available. </p>
+      </div>
+      <div>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="dark" icon-start>
+              <ion-icon name='wifi'></ion-icon>
+              Free Wi-Fi
+            </button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button clear small color="dark" icon-start>
+              <ion-icon name='cafe'></ion-icon>
+              Free Coffee
+            </button>
+          </ion-col>
+          <ion-col text-right>
+            <button ion-button clear small color="dark" icon-start>
+              <img src="https://img.icons8.com/ios-filled/20/000000/parking.png">
+              Free Parking
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="dark" icon-start>
+              <img src="https://img.icons8.com/ios-filled/20/000000/swimming.png">
+              Outdoor pool
+            </button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button clear small color="dark" icon-start>
+                <img src="https://img.icons8.com/android/18/000000/washing-machine.png">
+                Laundry 
+
+            </button>
+          </ion-col>
+          <ion-col text-right>
+            <button ion-button clear small color="dark" icon-start>
+                <img src="https://img.icons8.com/ios-filled/16/000000/cooling.png">
+                Air-Conditioned
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-md-12 col-lg-12 col-sm-12>
+          <ion-card>
+            <video width="100%" controls>
+              <source src="../../assets/imgs/clip.mp4" type="video/mp4">
+            </video>
+            <ion-card-content>
+              <ion-card-title style="text-align: center">
+                Top Things to Do in Cape Town.
+                <!-- The Bay Hotel boasts an unrivalled location in Camps Bay – making it one of the most beautiful
+                beachfront hotels in Cape Town. -->
+              </ion-card-title>
+              <p style="text-align: center">
+                Enjoy the beautiful beach sunsets and more...
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col class="second-col" col-12 col-md-12 col-lg-12 col-sm-12>
+          <ion-slides spaceBetween="-57" slidesPerView="1" loop="true">
+            <ion-slide>
+              <img src="../../assets/imgs/table-mountain.jpg" class="thumb" />
+              <div class="card-title">Sea Food</div>
+              <div class="card-subtitle">ALL INCLUSIVE</div>
+            </ion-slide>
+
+            <ion-slide>
+              <img src="../../assets/imgs/slide.jpg" class="thumb" />
+              <div class="card-title">Bay’s Luxury</div>
+              <div class="card-subtitle">Beachfront Escape</div>
+            </ion-slide>
+
+            <ion-slide>
+              <img src="../../assets/imgs/beach-houses.jpg" class="thumb" />
+              <div class="card-title">BEACH BREAKS</div>
+              <div class="card-subtitle">ALL INCLUSIVE</div>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-item no-padding>
+        <ion-label position="floating" text-center>
+          <h1>Review Summary <img src="https://img.icons8.com/flat_round/20/000000/question-mark.png"></h1>
+        </ion-label>
+      </ion-item>
+      <ion-row no-padding>
+        <ion-col col-12 col-md-12 col-lg-12 col-sm-12>
+          <button ion-button clear small color="danger" icon-start>
+            Rooms · 4,5 :
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </button>
+          <p padding-left>Rooms had views·Some guests said the bathrooms were small.</p>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col col-12 col-md-12 col-lg-12 col-sm-12>
+          <button ion-button clear small color="danger" icon-start>
+            Location · 4,5 :
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+          </button>
+          <p padding-left>Near the beach; restaurants & bars nearby.</p>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col col-12 col-md-12 col-lg-12 col-sm-12>
+          <button ion-button clear small color="danger" icon-start>
+            Service & facilities · 4,2 :
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name='star'></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </button>
+          <p padding-left>Guests appreciated the friendly staff·Some guests said reception
+            & housekeeping could be improved·Guests enjoyed the fitness centre</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row no-padding>
+        <ion-item no-padding>
+          <ion-label position="floating" text-center>
+            <h2>Transport</h2>
+          </ion-label>
+          <!-- <ion-textarea></ion-textarea> -->
+        </ion-item>
+        <ion-col text-center>
+          <h4 padding text-center>Airport</h4>
+          <button ion-button clear small color="dark" icon-start>
+            <img src="https://img.icons8.com/material-sharp/20/000000/airport.png">
+            Cape International Airport(CPT)
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="dark" icon-start>
+            <ion-icon name="car"></ion-icon>
+            29 min
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="dark" icon-start>
+            <ion-icon name="bus"></ion-icon>
+            40 min
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button clear small color="dark" icon-start>
+            <ion-icon name="train"></ion-icon>
+            1 hr 8
+          </button>
+        </ion-col>
+      </ion-row>
+      <p padding text-center>Cape Town Camps Bay·3 min walk from hotel</p>
+      <ion-row>
+        <ion-item no-padding>
+          <ion-label position="floating" text-center>
+            <h2>Public Transport</h2>
+          </ion-label>
+          <!-- <ion-textarea></ion-textarea> -->
+        </ion-item>
+        <ion-col text-center>
+
+          <button ion-button clear small color="dark" icon-start>
+            <ion-icon name="train"></ion-icon>
+            Train
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="dark" icon-start>
+            <ion-icon name="bus"></ion-icon>
+            Bus
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col>
+          <p>Table Mountain Aerial Cableway (26 min)·Bo-Kaap (31 min)·
+            Table Mountain National Park (39 min)·Table Mountain (55 min)
+            <ion-item no-padding></ion-item>
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 col-md-6 col-lg-6 col-sm-12>
+          <ul style="list-style: none">
+            <h6>Contact Details</h6>
+            <li>+27 (0)21 734 0497</li>
+            <li>direct@thebayhotel.com</li>
+          </ul>
+        </ion-col>
+        <ion-col col-6 col-md-6 col-lg-6 col-sm-12>
+          <ul style="list-style: none">
+            <h6>Location</h6>
+            <li>69 Victoria Road</li>
+            <li>Camps Bay</li>
+            <li>Cape Town</li>
+            <li>South Africa</li>
+          </ul>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
